@@ -7,7 +7,7 @@
 
 #define MAX_OPTIONS 15
 
-static int height, width;
+int sb_height, sb_width;
 static int cursor = 0;
 static int active = 0;
 static int last_cursor = 0;
@@ -72,30 +72,6 @@ void print_options(WINDOW *sidebar)
 
         if(cursor == i) wattroff(sidebar, COLOR_PAIR(1));
     }
-}
-
-WINDOW *create_sidebar(int rows, int cols)
-{
-    height = rows - 1;
-    width = 15;
- 
-    WINDOW *win = newwin(rows - 1, width, 0, 0);
-    if(win == NULL)
-    {
-        endwin();
-        printf("Could not create the sidebar!\n");
-        getc(stdin);
-        exit(-5);
-    }
-    refresh();
-    box(win, 0, 0);
-
-    return win;
-}
-
-int get_sidebar_width(void)
-{
-    return width;
 }
 
 int get_active_option(void)

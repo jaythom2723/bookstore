@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "sidebar.h": "c"
+        "sidebar.h": "c",
+        "ncurses.h": "c",
+        "common.h": "c"
     }
 }
