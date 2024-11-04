@@ -1,6 +1,7 @@
 #include "sidebar.h"
 
 #include "keys.h"
+#include "common.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -12,7 +13,7 @@ static int cursor = 0;
 static int active = 0;
 static int last_cursor = 0;
 
-char *options[MAX_OPTIONS] = {
+static const char *options[MAX_OPTIONS] = {
     "Inventory    ",
     "Personnel    ",
     "Orders       ",
@@ -42,8 +43,7 @@ void change_cursor(WINDOW *sidebar, int key)
 
     if(last_cursor != cursor)
     {
-        wclear(sidebar);
-        box(sidebar, 0, 0);
+        CLEAR_WINDOW(sidebar);
         print_options(sidebar);
         wrefresh(sidebar);
         last_cursor = cursor;

@@ -1,0 +1,22 @@
+<Inventory>
+    <Piece>
+        <Type>Book</Type>
+        <Name></Name>
+        <Author></Author>
+        <ReleaseYear></ReleaseYear>
+        <TotalHeld></TotalHeld>
+        <TotalOut></TotalOut>
+        <Description></Description>
+        <ReadingLevel></ReadingLevel>
+        <NumPages></NumPages>
+        <CheckoutFee></CheckoutFee>
+        <LostFee></LostFee>
+        <BookHolders>
+            <Holder>
+                <Name></Name>
+                <Age></Age>
+                <DateToReturn></DateToReturn>
+            </Holder>
+        </BookHolders>
+    </Piece>
+</Inventory>

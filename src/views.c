@@ -3,6 +3,8 @@
 void inventory_view(WINDOW *main_view, int rows, int cols)
 {
     mvwprintw(main_view, 1, 1, "Inventory View!");
+
+    // TODO: define a piece of inventory.
 }
 
 void personnel_view(WINDOW *main_view, int rows, int cols)
