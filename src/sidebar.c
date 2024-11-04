@@ -93,14 +93,12 @@ WINDOW *create_sidebar(int rows, int cols)
     return win;
 }
 
-void destroy_sidebar(WINDOW *sidebar)
-{
-    wborder(sidebar, ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
-    wrefresh(sidebar);
-    delwin(sidebar);
-}
-
 int get_sidebar_width(void)
 {
     return width;
+}
+
+int get_active_option(void)
+{
+    return active;
 }

@@ -7,8 +7,8 @@ void change_cursor(WINDOW *sidebar, int key);
 void print_options(WINDOW *sidebar);
 
 WINDOW *create_sidebar(int rows, int cols);
-void destroy_sidebar(WINDOW *sidebar);
 
 int get_sidebar_width(void);
+int get_active_option(void);
 
 #endif // SIDEBAR_H
